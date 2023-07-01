@@ -30,8 +30,10 @@
     "lint:fix": "yarn lint --fix",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(js|jsx|json|ts|tsx)\"",
     "pre-commit": "lint-staged",
+    "check-types": "tsc",
     "pre-commit-lint": "yarn check-types && lint-staged",
-    "validate": "yarn check-types && yarn pre-commit"
+    "validate": "yarn check-types && yarn pre-commit",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -61,7 +63,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
+    "husky": "^8.0.0",
     "lint-staged": "^13.2.3",
     "prettier": "^2.8.8"
   }
